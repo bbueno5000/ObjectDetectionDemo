@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>object_detection_demo</Name>
     <RootNamespace>object_detection_demo</RootNamespace>
+    <InterpreterId>CondaEnv|CondaEnv|object_detection_env</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +23,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="object_detection_demo.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|object_detection_env" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
